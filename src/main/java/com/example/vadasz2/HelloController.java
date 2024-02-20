@@ -2,13 +2,31 @@ package com.example.vadasz2;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 
 public class HelloController {
-    @FXML
-    private Label welcomeText;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    @FXML private Pane pnJatek;
+    @FXML private Label lbloves;
+    @FXML private Label lbroka;
+
+    private ImageView[][] it = new ImageView[16][32];
+    private int[][] t = new int[16][32];
+    private Image[] icon = new Image[5];
+    private String[] iconNev = {"dark", "dead", "fox", "home", "tree"};
+    private final int DARK = 0;
+
+    public void initialize(){
+        for(int i=0; i<5; i++) icon[i] = new Image(getClass().getResourceAsStream("icons/"+iconNev[i]+".png"));
+        for(int s=0; s<16; s++) for(int o=0; o<32; o++){
+            it[s][o] = new ImageView(icon[DARK]);
+            it[s][o].setLayoutX(10+o*48);
+            it[s][o].setLayoutY(10+s*48);
+            pnJatek.getChildren().add(it[s][o]);
+        }
     }
+
+
 }
