@@ -14,7 +14,7 @@
    </Pane>
    <HBox>
       <children>
-         <Label fx:id="lblokes" text="0 lökés / 0 találat">
+         <Label fx:id="lbloves" text="0 lökés / 0 találat">
             <font>
                <Font name="System Bold" size="16.0" />
             </font>
