@@ -6,28 +6,28 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.2" fx:controller="com.example.vadasz2.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
+<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.2" fx:controller="com.example.vadasz2.HelloController">
    <Pane fx:id="pnJatek" prefHeight="788.0" prefWidth="1556.0" style="-fx-background-color: white; -fx-border-color: lightgrey;">
       <cursor>
          <Cursor fx:constant="CROSSHAIR" />
       </cursor>
    </Pane>
-   <HBox prefHeight="100.0" prefWidth="200.0">
+   <HBox>
       <children>
-         <Label text="0 lökés / 0 találat">
+         <Label fx:id="lblokes" text="0 lökés / 0 találat">
             <font>
-               <Font name="System Bold" size="12.0" />
+               <Font name="System Bold" size="16.0" />
             </font>
          </Label>
          <Label maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
-         <Label text="0 / 0 róka">
+         <Label fx:id="lbroka" text="0 / 0 róka">
             <font>
-               <Font name="System Bold" size="12.0" />
+               <Font name="System Bold" size="16.0" />
             </font>
          </Label>
       </children>
    </HBox>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
 </VBox>
